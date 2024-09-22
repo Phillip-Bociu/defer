@@ -1,4 +1,4 @@
-
+#pragma once
 template<typename Fn>
 class _deferClass {
 	public:
