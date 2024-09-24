@@ -9,6 +9,7 @@ class _deferClass {
 };
 
 #define CONCAT(a, b) a##b
-#define MAKE_DEFER_NAME() CONCAT(anon_deferVar_, __COUNTER__)
-#define defer const _deferClass MAKE_DEFER_NAME = [&]() 
+#define CONCAT2(a, b) CONCAT(a, b)
+#define MAKE_DEFER_NAME() CONCAT2(anon_deferVar_, __COUNTER__)
+#define defer const _deferClass MAKE_DEFER_NAME() = [&]() 
 
